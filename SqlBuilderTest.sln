@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBuilderTest", "SqlBuilderTest\SqlBuilderTest.csproj", "{8921A25E-E132-4939-89E1-D655AFDEED8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBuilder", "SqlBuilder\SqlBuilder.csproj", "{04A48E26-86AE-4879-8D9E-558B64104D15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8921A25E-E132-4939-89E1-D655AFDEED8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8921A25E-E132-4939-89E1-D655AFDEED8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8921A25E-E132-4939-89E1-D655AFDEED8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04A48E26-86AE-4879-8D9E-558B64104D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A48E26-86AE-4879-8D9E-558B64104D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A48E26-86AE-4879-8D9E-558B64104D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A48E26-86AE-4879-8D9E-558B64104D15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
