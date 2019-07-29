@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBuilderTest", "SqlBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBuilder", "SqlBuilder\SqlBuilder.csproj", "{04A48E26-86AE-4879-8D9E-558B64104D15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBuilder.UnitTest", "SqlBuilder.UnitTest\SqlBuilder.UnitTest.csproj", "{21B1D6C5-E511-484D-A90D-28749AD3F564}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{04A48E26-86AE-4879-8D9E-558B64104D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A48E26-86AE-4879-8D9E-558B64104D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04A48E26-86AE-4879-8D9E-558B64104D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B1D6C5-E511-484D-A90D-28749AD3F564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B1D6C5-E511-484D-A90D-28749AD3F564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B1D6C5-E511-484D-A90D-28749AD3F564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B1D6C5-E511-484D-A90D-28749AD3F564}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
