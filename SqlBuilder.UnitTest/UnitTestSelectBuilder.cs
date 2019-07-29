@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Windows.Forms;
 
 namespace SqlBuilder.UnitTest
 {
@@ -58,6 +59,66 @@ namespace SqlBuilder.UnitTest
             Assert.IsTrue(select.SelectStatement.Contains("where"));
             Assert.IsTrue(select.SelectStatement.Contains("column1 = :column1"));
             Assert.IsTrue(select.SelectStatement.Contains("and column2 = :column2"));
+        }
+
+        [TestMethod]
+        public void WhereWithNotEmptyTextBox()
+        {
+            string sqlTest = "select * from table";
+
+            TextBox textBox = new TextBox();
+            textBox.Text = "something";
+
+            SelectBuilder select = new SelectBuilder(sqlTest);
+            select.AddCondition(textBox, "column1 = :column1");
+
+            Assert.IsTrue(select.SelectStatement.Contains("where"));
+            Assert.IsTrue(select.SelectStatement.Contains("column1 = :column1"));
+        }
+
+        [TestMethod]
+        public void WhereWithEmptyTextBox()
+        {
+            string sqlTest = "select * from table";
+
+            TextBox textBox = new TextBox();
+            textBox.Text = string.Empty;
+
+            SelectBuilder select = new SelectBuilder(sqlTest);
+            select.AddCondition(textBox, "column1 = :column1");
+
+            Assert.IsFalse(select.SelectStatement.Contains("where"));
+            Assert.IsFalse(select.SelectStatement.Contains("column1 = :column1"));
+        }
+
+        [TestMethod]
+        public void WhereWithCheckedCheckBox()
+        {
+            string sqlTest = "select * from table";
+
+            CheckBox checkBox = new CheckBox();
+            checkBox.Checked = true;
+
+            SelectBuilder select = new SelectBuilder(sqlTest);
+            select.AddCondition(checkBox, "column1 = :column1");
+
+            Assert.IsTrue(select.SelectStatement.Contains("where"));
+            Assert.IsTrue(select.SelectStatement.Contains("column1 = :column1"));
+        }
+
+        [TestMethod]
+        public void WhereWithUncheckedCheckBox()
+        {
+            string sqlTest = "select * from table";
+
+            CheckBox checkBox = new CheckBox();
+            checkBox.Checked = false;
+
+            SelectBuilder select = new SelectBuilder(sqlTest);
+            select.AddCondition(checkBox, "column1 = :column1");
+
+            Assert.IsFalse(select.SelectStatement.Contains("where"));
+            Assert.IsFalse(select.SelectStatement.Contains("column1 = :column1"));
         }
 
         [TestMethod]
